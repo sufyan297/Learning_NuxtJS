@@ -10,13 +10,26 @@ module.exports = {
       { hid: 'description', name: 'description', content: 'Nuxt.js project' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons'}
     ]
   },
+  /**
+   * CSS
+   */
+  css: [
+    '~/assets/style/vuetify.js'
+  ],
   /*
   ** Customize the progress bar color
   */
   loading: { color: '#3B8070' },
+  /**
+   * Plugins
+   */
+  plugins: [
+    '~/plugins/vuetify.js'
+  ],
   /*
   ** Build configuration
   */
@@ -24,7 +37,10 @@ module.exports = {
     /*
     ** Run ESLint on save
     */
-   vendor: ['isomorphic-fetch'],
+   vendor: [
+     'isomorphic-fetch',
+     '~/plugins/vuetify.js'
+    ],
     extend (config, { isDev, isClient }) {
       if (isDev && isClient) {
         config.module.rules.push({
@@ -34,6 +50,7 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
-    }
+    },
+    extractCSS: true
   }
 }
