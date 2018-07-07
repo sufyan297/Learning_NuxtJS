@@ -27,9 +27,7 @@ module.exports = {
   /**
    * Plugins
    */
-  plugins: [
-    '~/plugins/vuetify.js'
-  ],
+  plugins: ['~/plugins/vuetify.js'],
   /*
   ** Build configuration
   */

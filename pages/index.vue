@@ -73,7 +73,14 @@ export default {
   async asyncData(context) {
     const resp = await fetch('https://jsonplaceholder.typicode.com/posts');
     const posts = await resp.json();
-    console.log("POSTS: ", posts);
+    // console.log("Context: REQ: ", context.req.session);
+    // const posts = [
+    //   {
+    //     id: 1,
+    //     title: "Mohammed Sufyan"
+    //   }
+    // ]
+    // console.log("POSTS: ", posts);
     return { posts }; //unstructured
   }
 }
