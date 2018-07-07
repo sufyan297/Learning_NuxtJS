@@ -5,7 +5,9 @@
   "author": "Mohammed Sufyan <sufyan297@gmail.com>",
   "private": true,
   "scripts": {
-    "dev": "./node_modules/.bin/babel . --presets babel-preset-env,babel-preset-stage-2 --out-dir dist --ignore ./dist,./node_modules && node dist/server.js",
+    "babel-build": "./node_modules/.bin/babel . --presets babel-preset-env,babel-preset-stage-2 --out-dir dist --ignore ./dist,./node_modules",
+    "babel-watch": "./node_modules/.bin/babel . --presets babel-preset-env,babel-preset-stage-2 --watch --out-dir dist --ignore ./dist,./node_modules",
+    "dev": "yarn babel-build && node dist/server.js",
     "build": "nuxt build",
     "start": "cross-env NODE_ENV=production node server.js",
     "generate": "nuxt generate",

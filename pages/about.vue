@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>Getting Data From Server Side</h1>
-   
+    <h4>Looks good!</h4>
     <hello-world :data="posts"/>
 
   </div>
