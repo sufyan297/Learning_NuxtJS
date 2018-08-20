@@ -1,5 +1,5 @@
 import "babel-polyfill"; //Must be on Top always
-import { Server, Utility } from '@sufyan/chidiya'
+import { Server, Utility } from '@ascendtis/chidiya'
 import { Nuxt, Builder } from 'nuxt'
 import config from './config'
 import * as models from './models'

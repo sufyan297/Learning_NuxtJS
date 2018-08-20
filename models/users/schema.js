@@ -1,12 +1,14 @@
-import { Types } from '@sufyan/chidiya';
+import { Types } from '@ascendtis/chidiya';
 
 export default {
   name: "User",
   tableName: "Users",
   validation: true,
-  fields: {
+  columns: {
     id: {
-      type: Types.ID
+      type: Types.ID,
+      primary: true,
+      generated: true
     },
     name: {
       type: Types.String
@@ -14,21 +16,5 @@ export default {
     age: {
       type: Types.Int
     }
-  },
-  beforeCreate: (record) => {
-    return new Promise ((resolve, reject) => {
-      console.log("");
-      console.log("beforeCreate: METHOD: ");
-      console.log(record);
-      console.log("");
-      resolve(record);
-    })
-  },
-  beforeUpdate: (record) => {
-    return new Promise ((resolve, reject) => {
-
-      console.log("[beforeUpdate] RECORD: ", record);
-      resolve(record);
-    })
   }
 }
